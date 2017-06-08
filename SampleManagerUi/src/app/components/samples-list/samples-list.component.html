@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Barcode</th>
+      <th>Status</th>
+      <th>Created At</th>
+      <th>Created By</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sample of samples">
+      <td>{{sample.sampleId}}</td>
+      <td>{{sample.barcode}}</td>
+      <td>{{sample.status}}</td>
+      <td>{{sample.createdAt | date:'shortDate'}}</td>
+      <td>{{sample.userFirstName}} {{sample.userLastName}}</td>
+    </tr>
+  </tbody>
+</table>
+

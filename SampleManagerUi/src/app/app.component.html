@@ -1,0 +1,30 @@
+<nav md-tab-nav-bar>
+  <a md-tab-link
+     
+     routerLink="/samples/all"
+     routerLinkActive #rlaAll="routerLinkActive"
+     [active]="rlaAll.isActive">
+    All Samples
+  </a>
+  <a md-tab-link 
+    routerLink="/samples/status"
+    routerLinkActive #rlaStatus="routerLinkActive"
+    [active]="rlaStatus.isActive">
+      Samples By Status
+  </a>
+  <a md-tab-link
+    routerLink="/samples/name"
+    routerLinkActive #rlaName="routerLinkActive"
+    [active]="rlaName.isActive">
+    Samples By Name
+  </a>
+  <a md-tab-link
+    routerLink="/samples/add"
+    routerLinkActive #rlaAdd="routerLinkActive"
+    [active]="rlaAdd.isActive">
+    Add Sample
+  </a>
+</nav>
+
+<router-outlet></router-outlet>
+

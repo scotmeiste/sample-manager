@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-sm-6">
+    <md-select placeholder="Select Status" [(ngModel)]="sample.statusId ">
+      <md-option *ngFor="let status of statuses" [value]="status.statusId">{{status.status}}</md-option>
+    </md-select>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <md-select placeholder="Select User" [(ngModel)]="sample.userId ">
+      <md-option *ngFor="let user of users" [value]="user.userId">{{user.firstName}} {{user.lastName}}</md-option>
+    </md-select>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <md-input-container>
+      <input mdInput placeholder="Enter Barcode" type="text" [(ngModel)]="sample.barcode" />
+    </md-input-container>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <button md-raised-button color="primary" (click)="save()">Save</button>
+    <button md-button color="primary" (click)="cancel()">Cancel</button>
+  </div>
+</div>
+<div *ngIf="showError" class="row">
+  <div class="col-sm-12">
+    <div class="bg-danger">
+      An error occurred saving this sample.
+    </div>
+  </div>
+</div>
