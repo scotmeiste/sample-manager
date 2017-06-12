@@ -22,6 +22,8 @@ SampleManagerUi - Angular Single Page Application
 
 2. Open a console window and navigate to the SampleManagerUi folder
 
-3. run `ng serve`
+3. run `npm install`
 
-4. navigate to localhost:4200 to see application
+4. run `ng serve`
+
+5. navigate to localhost:4200 to see application
